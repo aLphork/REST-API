@@ -19,10 +19,11 @@ connection.end();
 module.exports = connection;
 */
 const { Sequelize } = require('sequelize');
-const sequelize = new Sequelize('mydatabase', 'dbuser', 'my-secret-pw', {
-    host: 'localhost:3306',
+const sequelize = new Sequelize( 'mydb', 'root', 'my-secret-pw', {
+    host: 'localhost',
     dialect: 'mysql',
-    logging: false, 
+    logging: false,
+    port: 3306, 
 });
 
 (async () => {
