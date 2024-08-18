@@ -24,7 +24,7 @@ const sequelize = new Sequelize( 'mydb', 'root', 'my-secret-pw', {
     dialect: 'mysql',
     logging: false,
     port: 3306, 
-});
+}); 
 
 (async () => {
     try {
