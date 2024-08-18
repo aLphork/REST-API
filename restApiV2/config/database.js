@@ -16,15 +16,13 @@ connection.query('SELECT 1 + 1 AS solution', (err, rows, fields) => {
 })
 connection.end();
 
-module.exports = connection;*/
-
+module.exports = connection;
+*/
 const { Sequelize } = require('sequelize');
-
-// Sequelize ile MySQL bağlantısı oluşturma
 const sequelize = new Sequelize('mydatabase', 'dbuser', 'my-secret-pw', {
-    host: 'localhost',
+    host: 'localhost:3306',
     dialect: 'mysql',
-    logging: false, // SQL sorgularının konsolda gözükmesini istemiyorsanız
+    logging: false, 
 });
 
 (async () => {
