@@ -1,23 +1,4 @@
-/*const mysql = require('mysql')
-const connection = mysql.createConnection({
-  host: 'localhost/3000',
-  user: 'dbuser',
-  password: 'my-secret-pw',
-  database: 'mydatabase'
-})
 
-connection.connect()
-
-connection.query('SELECT 1 + 1 AS solution', (err, rows, fields) => {
-  if (err) throw err
-  console.error('Veritabanı bağlantısında hata:', err.message);
-
-  console.log('The solution is: ', rows[0].solution)
-})
-connection.end();
-
-module.exports = connection;
-*/
 const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize( 'mydb', 'root', 'my-secret-pw', {
     host: 'localhost',

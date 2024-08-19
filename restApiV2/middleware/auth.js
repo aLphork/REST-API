@@ -4,6 +4,7 @@ const SECRET_KEY = 'supersecretkey';
 const authenticateToken = (req, res, next) => {
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
+    console.log(req.headers, token, req.params);
 
     if (!token) return res.sendStatus(401);
 

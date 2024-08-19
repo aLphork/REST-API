@@ -35,6 +35,7 @@ router.put('/:id', authenticateToken, async (req, res) => {
 // Delete Post
 router.delete('/:id', authenticateToken, async (req, res) => {
     const { id } = req.params;
+    console.log("sa")
     try {
         await Post.destroy({ where: { id } });
         res.json({ message: 'Post silindi' });
