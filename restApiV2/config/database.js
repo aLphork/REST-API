@@ -14,6 +14,6 @@ const sequelize = new Sequelize( 'mydb', 'root', 'my-secret-pw', {
     } catch (error) {
         console.error('Veritabanı bağlantısında hata:', error.message);
     }
-})();
+})();//dışarıyla iletişime girmeden çalışması.[()()]
 
 module.exports = sequelize;
